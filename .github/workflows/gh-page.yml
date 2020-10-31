@@ -20,10 +20,6 @@ jobs:
       
       # init
       - name: init
-        run: |
-          git submodule init
-          sh -e script/get-hugo.sh
-          cd site
-          ../bin/hugo
+        run: echo 123
 
 
