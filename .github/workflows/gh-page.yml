@@ -9,7 +9,7 @@ on:
 
 jobs:
   # 任务名
-  blog-ci:
+  blog:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
