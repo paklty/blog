@@ -23,8 +23,13 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: init blog
+        run: |
+          git summodule init
+          sh script/get-hugo.sh
+          cd site
+          ../bin/hugo
+          pwd && ls
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
