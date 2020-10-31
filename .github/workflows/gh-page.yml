@@ -25,3 +25,5 @@ jobs:
           sh -e script/get-hugo.sh
           cd site
           ../bin/hugo
+
+
