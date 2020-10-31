@@ -1,0 +1,31 @@
+name: blog CI
+
+# 触发条件
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  PAGE_REPORT
+
+jobs:
+  # 任务名
+  blog-ci:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      # init
+      - name: init
+        run: |
+          git submodule init
+          sh -e script/get-hugo.sh
+          cd site
+          ../bin/hugo
+          
