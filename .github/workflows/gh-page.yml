@@ -7,9 +7,6 @@ on:
   pull_request:
     branches: [ master ]
 
-env:
-  PAGE_REPORT
-
 jobs:
   # 任务名
   blog-ci:
@@ -28,4 +25,3 @@ jobs:
           sh -e script/get-hugo.sh
           cd site
           ../bin/hugo
-          
