@@ -1,4 +1,4 @@
-name: blog CI
+name: blog
 
 # 触发条件
 on:
